@@ -42,10 +42,12 @@ public class HomeController {
 		System.out.println("User Page Requested");
 		String numerator = user.getNum();
 		int numeratorInt = Integer.parseInt(numerator);
+		System.out.println(numeratorInt);
 		try {
 			int quotient = numeratorInt/0;	
 		}
 		catch (Exception e) {
+	           System.out.println(e);
             	   log.error(e.getMessage());
             	   StringWriter writer = new StringWriter();
                    PrintWriter pw = new PrintWriter(writer);
